@@ -120,7 +120,7 @@ const solutions = [
 		"date": "5 March 2025"
 	},
 	{
-		"url": "https://taradesk.github.io/code-in-practice-md/todo-app/index.html",
+		"url": "https://taradesk.github.io/code-in-practice-md/todo/index.html",
 		"name": "Todo App",
 		"category": "Intermediate",
 		"date": "25 April 2025"
