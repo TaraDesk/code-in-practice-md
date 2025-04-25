@@ -22,13 +22,33 @@ jobs:
           npm install
           npm run build
 
-      - name: Copy root index.html
+      - name: Create temporary directory for deployment
+        run: mkdir -p gh-pages-temp
+
+      - name: Create temporary directory for assets
+        run: mkdir -p gh-pages-temp/assets
+
+      - name: Create temporary directory for the app
+        run: mkdir -p gh-pages-temp/todo
+
+      - name: Copy index.html to temporary folder
         run: |
-          cp index.html gh-pages-index.html
+          cp index.html gh-pages-temp/index.html
+
+      - name: Copy script to temporary folder
+        run: |
+          cp assets/script.js gh-pages-temp/assets/script.js
+
+      - name: Copy icon to temporary folder
+        run: |
+          cp assets/favicon-32x32.png gh-pages-temp/assets/favicon-32x32.png
+
+      - name: Copy Svelte app build to temporary folder
+        run: |
+          cp -R todo-app-main/dist/* gh-pages-temp/todo
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: todo-app-main/dist
-          target-folder: todo-app
+          folder: gh-pages-temp 

@@ -1,17 +1,17 @@
 <script>
   let isThemeLight = $state(true);
-  let imgToggle = $state("/icon-moon.svg");
+  let imgToggle = $state("./icon-moon.svg");
 
   function toggleTheme() {
     isThemeLight = !isThemeLight;
     if (isThemeLight) {
       document.documentElement.classList.remove("dark");
       document.documentElement.classList.add("light");
-      imgToggle = "/icon-moon.svg";
+      imgToggle = "./icon-moon.svg";
     } else {
       document.documentElement.classList.remove("light");
       document.documentElement.classList.add("dark");
-      imgToggle = "/icon-sun.svg";
+      imgToggle = "./icon-sun.svg";
     }
   }
 </script>
