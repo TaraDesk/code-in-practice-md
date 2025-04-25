@@ -32,5 +32,3 @@ jobs:
           branch: gh-pages
           folder: todo-app-main/dist
           target-folder: todo-app
-          additional_files: |
-            gh-pages-index.html 
