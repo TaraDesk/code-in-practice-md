@@ -1,0 +1,108 @@
+:root {
+	--title-color: hsl(0, 0%, 100%);
+	--text-color: hsl(237, 18%, 59%);
+	--primary-color: hsl(345, 95%, 68%);
+	--card-background: hsl(236, 21%, 26%);
+	--background-color: hsl(234, 17%, 12%);
+	--deep-background: hsl(235, 16%, 14%);
+}
+
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	text-transform: uppercase;
+}
+
+body {
+	width: 100vw;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	position: relative;
+
+	background-color: var(--background-color);
+    background-image: url('/bg-stars.svg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: var(--text-color);
+
+	font-family: "Red Hat Text", sans-serif;
+	font-weight: 700;
+
+	@media (min-width: 47.25rem) {
+		background-size: contain;
+    }
+}
+
+body::before {
+    content: '';
+    background-image: url('/pattern-hills.svg');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 18.75rem;
+
+    @media (min-width: 47.25rem) {
+    	background-position: center bottom;
+    }
+}
+
+a, a:hover, a:visited {
+	text-decoration: none;
+}
+
+// Utils Class
+.flex {
+	display: flex;
+
+	&-col {
+		flex-direction: column;
+	}
+
+	&-jc-sb {
+		justify-content: space-between;
+	}
+
+	&-jc-s {
+		justify-content: stretch;
+	}
+
+	&-jc-c {
+		justify-content: center;
+	}
+
+	&-ai-c {
+		align-items: center;
+	}
+}
+
+@mixin notches($position) {
+	content: '';
+	position: absolute;
+	z-index: 5;
+	width: .5rem;
+	height: .5rem;
+	background-color: var(--background-color);
+	border-radius: 50%;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@if $position == 'left' {
+		left: -0.313rem;
+	} @else if $position  == 'right' {
+		right: -0.313rem;
+	}
+
+	@media (min-width: 47.25rem) {
+		top: 49%;
+		width: 0.75rem;
+		height: 0.75rem;
+	}
+}

@@ -22,11 +22,11 @@ Users should be able to:
 
 - Desktop Preview
 
-![Design preview for the News homepage coding challenge](./screenshot/Screenshot_2025-04-25_15-05-42.png)
+![Design preview for the Todo App coding challenge](./screenshot/Screenshot_2025-04-25_15-05-42.png)
 
 - Mobile Preview
 
-![Design preview for the News homepage coding challenge](./screenshot/Screenshot_2025-04-25_15-00-54.png)
+![Design preview for the Todo App coding challenge](./screenshot/Screenshot_2025-04-25_15-00-54.png)
 
 ### Links
 

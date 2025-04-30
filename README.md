@@ -9,6 +9,6 @@ I’ll be updating this repository as I complete new challenges, so feel free to
 Below is a list of the challenges (Intermediate) I’ve completed along with their completion dates:
 
 - **[Challenge 1: Todo App](#)** — Completed on **April 25, 2025**
-- **[Challenge 2: Launch Countdown Timer](#)** — Completed **Soon**
-- **[Challenge 3: Calculator App](#)** — Completed **Soon**
-- **[Challenge 4: Easybank Landing Page](#)** — Completed **Soon**
+- **[Challenge 2: Launch Countdown Timer](#)** — Completed on **April 28, 2025**
+- **[Challenge 3: Calculator App](#)** — Completed **April 29, 2025**
+- **[Challenge 4: Easybank Landing Page](#)** — Completed **April 30, 2025**

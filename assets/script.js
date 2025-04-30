@@ -124,25 +124,25 @@ const solutions = [
 		"name": "Todo App",
 		"category": "Intermediate",
 		"date": "25 April 2025"
-	}
-	// {
-	// 	"url": "#",
-	// 	"name": "Calculator App",
-	// 	"category": "Intermediate",
-	// 	"date": "- March 2025"
-	// },
-	// {
-	// 	"url": "#",
-	// 	"name": "Launch Countdown Time",
-	// 	"category": "Intermediate",
-	// 	"date": "- March 2025"
-	// },
-	// {
-	// 	"url": "#",
-	// 	"name": "Easybank Landing Page",
-	// 	"category": "Intermediate",
-	// 	"date": "- March 2025"
-	// }
+	},
+	{
+		"url": "https://taradesk.github.io/code-in-practice-md/countdown-timer/index.html",
+		"name": "Launch Countdown Time",
+		"category": "Intermediate",
+		"date": "28 April 2025"
+	},
+	{
+		"url": "https://taradesk.github.io/code-in-practice-md/landing-page/index.html",
+		"name": "Easybank Landing Page",
+		"category": "Intermediate",
+		"date": "29 April 2025"
+	},
+	{
+		"url": "https://taradesk.github.io/code-in-practice-md/calculator-app/index.html",
+		"name": "Calculator App",
+		"category": "Intermediate",
+		"date": "30 April 2025"
+	},
 ];
 
 // Elements

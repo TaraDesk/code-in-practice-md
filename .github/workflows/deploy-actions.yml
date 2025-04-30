@@ -1,0 +1,93 @@
+name: Deploy Todo App
+
+on:
+  push:
+    branches: [main]  # or change to your default branch name
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22
+
+      - name: Install Todo App dependencies and build
+        run: |
+          cd todo-app-main
+          npm install
+          npm run build
+
+      - name: Install Calculator App dependencies and build
+        run: |
+          cd calculator-app-main
+          npm install
+          npm run build
+
+      - name: Install Easybank Landing Page dependencies and build
+        run: |
+          cd easybank-landing-page-master
+          npm install
+          npm run build
+
+      - name: Install Launch Countdown Timer dependencies and build
+        run: |
+          cd launch-countdown-timer-main
+          npm install
+          npm run build
+
+      - name: Create temporary directory for deployment
+        run: mkdir -p gh-pages-temp
+
+      - name: Create temporary directory for assets
+        run: mkdir -p gh-pages-temp/assets
+
+      - name: Create temporary directory for Todo app
+        run: mkdir -p gh-pages-temp/todo-app
+
+      - name: Create temporary directory for Calculator App
+        run: mkdir -p gh-pages-temp/calculator-app
+
+      - name: Create temporary directory for Launch Countdown Timer
+        run: mkdir -p gh-pages-temp/countdown-timer
+
+      - name: Create temporary directory for Easybank Landing Page
+        run: mkdir -p gh-pages-temp/landing-page
+
+      - name: Copy index.html to temporary folder
+        run: |
+          cp index.html gh-pages-temp/index.html
+
+      - name: Copy script to temporary folder
+        run: |
+          cp assets/script.js gh-pages-temp/assets/script.js
+
+      - name: Copy icon to temporary folder
+        run: |
+          cp assets/favicon-32x32.png gh-pages-temp/assets/favicon-32x32.png
+
+      - name: Copy Svelte app build to temporary folder
+        run: |
+          cp -R todo-app-main/dist/* gh-pages-temp/todo-app
+
+      - name: Copy Svelte app build to temporary folder
+        run: |
+          cp -R calculator-app-main/dist/* gh-pages-temp/calculator-app
+
+      - name: Copy Svelte app build to temporary folder
+        run: |
+          cp -R launch-countdown-timer-main/dist/* gh-pages-temp/countdown-timer
+
+      - name: Copy Svelte app build to temporary folder
+        run: |
+          cp -R easybank-landing-page-master/dist/* gh-pages-temp/landing-page
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: gh-pages-temp 
